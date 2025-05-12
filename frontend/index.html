@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel de Tarefas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Painel de Tarefas</h1>
+
+        <form id="form-nova-tarefa" class="form-card">
+            <h2>Adicionar Nova Tarefa</h2>
+            <div>
+                <label for="titulo-nova">Título:</label>
+                <input type="text" id="titulo-nova" name="titulo-nova" required>
+            </div>
+            <div>
+                <label for="descricao-nova">Descrição (opcional):</label>
+                <input type="text" id="descricao-nova" name="descricao-nova">
+            </div>
+            <button type="submit">Adicionar Tarefa</button>
+        </form>
+
+        <h2>Minhas Tarefas</h2>
+        <ul id="lista-tarefas">
+            <p id="loading-message">Carregando tarefas...</p>
+        </ul>
+    </div>
+
+    <div id="modal-edicao" class="modal">
+        <div class="modal-content form-card">
+            <span class="close-button" id="close-modal-button">&times;</span>
+            <h2>Editar Tarefa</h2>
+            <form id="form-editar-tarefa">
+                <input type="hidden" id="editar-id"> <div>
+                    <label for="editar-titulo">Título:</label>
+                    <input type="text" id="editar-titulo" name="editar-titulo" required>
+                </div>
+                <div>
+                    <label for="editar-descricao">Descrição (opcional):</label>
+                    <input type="text" id="editar-descricao" name="editar-descricao">
+                </div>
+                <div>
+                    <label for="editar-status">Status:</label>
+                    <select id="editar-status" name="editar-status">
+                        <option value="pendente">Pendente</option>
+                        <option value="em andamento">Em Andamento</option>
+                        <option value="concluída">Concluída</option>
+                    </select>
+                </div>
+                <button type="submit">Salvar Alterações</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
