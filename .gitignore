@@ -1,0 +1,27 @@
+# Arquivos e pastas do sistema
+.DS_Store
+Thumbs.db
+
+# Arquivos de log
+*.log
+
+# Configurações do ambiente virtual Python
+venv/
+.env
+*.env
+
+# Arquivos temporários
+*.pyc
+__pycache__/
+
+# Configurações do editor
+.vscode/
+.idea/
+
+# Arquivos de build
+build/
+dist/
+*.egg-info/
+
+# Outros
+node_modules/
